@@ -1,0 +1,34 @@
+<%= render 'shared/navbar_main' %>
+  <div class="container">
+    <% if user_signed_in? %>
+      <div class="user-info">
+        <div class="user-image" style="margin-top: 20px;">
+          <div class="avatar avatar-bordered py-10" style="background-image: url(https://avatars0.githubusercontent.com/u/64172452?v=4);"></div>
+        </div>
+        <br>
+        <div class="account-items">
+          <div class="account-item">
+            <%= link_to "Messages", "#", class: "account-link" %>
+          </div>
+
+          <div class="account-item">
+            <%= link_to "Recently visited", visits_path, class: "account-link" %>
+          </div>
+
+          <div class="account-item">
+            <%= link_to "Add your business", new_place_path, class: "account-link" %>
+          </div>
+          <hr>
+          <div class="account-item">
+            <%= link_to "Edit profile", edit_user_registration_path, class: "account-link" %>
+          </div>
+          <div class="account-item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "account-link" %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+        <% controller.redirect_to new_user_session_path %>
+    <% end %>
+  </div>
+<%= render 'shared/navbar_bottom' %>

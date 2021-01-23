@@ -1,0 +1,13 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-amandla">
+  <div class="container px-3">
+    <div class="nav-back">
+      <%=  link_to :back do %>
+      <i class="fas fa-times"></i>
+      <% end %>
+    </div>
+    <div class="nav-title"><%= title %></div>
+    <div class="nav-empty"></div>
+  </div>
+</div>
+
+<!-- a conditional if title is set then don't do the regular navbar but the special title and if logo is true also show the amandla logo -->

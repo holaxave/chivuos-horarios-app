@@ -1,0 +1,40 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-amandla fixed-bottom">
+
+  <div class="container px-3">
+
+    <div class="nav-item">
+     <%=  link_to "#" do %>
+      <i class="fas fa-search"></i>
+      <% end %>
+    </div>
+
+    <% if controller_name == "wishlist_items" %>
+
+    <div class="nav-item">
+     <%=  link_to wishlist_items_path do %>
+      <i class="fas fa-heart"></i>
+      <% end %>
+    <% else %>
+    <div class="nav-item">
+     <%=  link_to wishlist_items_path do %>
+      <i class="far fa-heart"></i>
+      <% end %>
+    <% end %>
+
+    </div>
+
+    <% if controller_name == "pages" && action_name == "account" %>
+      <div class="nav-item">
+       <%=  link_to pages_path do %>
+        <i class="fas fa-user"></i>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="nav-item">
+       <%=  link_to pages_path do %>
+        <i class="far fa-user"></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

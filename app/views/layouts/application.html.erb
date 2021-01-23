@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Chivuos Horarios App</title>
+    <title>Chivuos Workdays</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600;800&display=swap" rel="stylesheet">    <script src="https://kit.fontawesome.com/1bca7065ce.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://res.cloudinary.com/dpnjiruwh/image/upload/v1607700432/favicon_A_lwxo11.png">
+
+    <link rel="shortcut icon"
+          type="image/png"
+          href="images/favicon_A" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: black;">
+    <%= render 'shared/flashes' %>
+    <div class="spacing">
     <%= yield %>
   </body>
 
